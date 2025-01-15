@@ -11,7 +11,8 @@ import jakarta.persistence.*;
 public class Order {
 
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private LocalDateTime orderDate;
 

@@ -7,7 +7,8 @@ import jakarta.persistence.*;
 public class CartItem {
 
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private int quantity;
     private Double price;

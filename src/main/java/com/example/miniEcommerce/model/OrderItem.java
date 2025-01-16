@@ -1,5 +1,7 @@
 package com.example.miniEcommerce.model;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -12,7 +14,7 @@ public class OrderItem {
 
     private int quantity;
 
-    private Double price;
+    private BigDecimal price;
 
     @ManyToOne
     @JoinColumn(name = "order_id")
@@ -37,11 +39,11 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

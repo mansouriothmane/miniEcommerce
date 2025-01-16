@@ -24,6 +24,34 @@ public class Order {
     private List<OrderItem> orderItems = new ArrayList<>();
 
     public Order() {
-        this.orderDate = LocalDateTime.now();
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public LocalDateTime getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(LocalDateTime orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
+    }
+
 }
